@@ -10,6 +10,7 @@
 		A20DF66C1FBEB420004EBB2F /* Paygent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20DF6621FBEB420004EBB2F /* Paygent.framework */; };
 		A20DF6711FBEB420004EBB2F /* PaygentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20DF6701FBEB420004EBB2F /* PaygentTests.swift */; };
 		A20DF6731FBEB420004EBB2F /* Paygent.h in Headers */ = {isa = PBXBuildFile; fileRef = A20DF6651FBEB420004EBB2F /* Paygent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A20DF67D1FBEB79B004EBB2F /* Paygent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20DF67C1FBEB79B004EBB2F /* Paygent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		A20DF66B1FBEB420004EBB2F /* PaygentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaygentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20DF6701FBEB420004EBB2F /* PaygentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygentTests.swift; sourceTree = "<group>"; };
 		A20DF6721FBEB420004EBB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20DF67C1FBEB79B004EBB2F /* Paygent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paygent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				A20DF6651FBEB420004EBB2F /* Paygent.h */,
+				A20DF67C1FBEB79B004EBB2F /* Paygent.swift */,
 				A20DF6661FBEB420004EBB2F /* Info.plist */,
 			);
 			path = Paygent;
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					A20DF6611FBEB420004EBB2F = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					A20DF66A1FBEB420004EBB2F = {
@@ -196,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A20DF67D1FBEB79B004EBB2F /* Paygent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -321,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -334,6 +339,7 @@
 		A20DF6771FBEB420004EBB2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -346,6 +352,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sk.Paygent;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,6 +361,7 @@
 		A20DF6781FBEB420004EBB2F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -374,6 +382,7 @@
 		A20DF67A1FBEB420004EBB2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PaygentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -387,6 +396,7 @@
 		A20DF67B1FBEB420004EBB2F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PaygentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

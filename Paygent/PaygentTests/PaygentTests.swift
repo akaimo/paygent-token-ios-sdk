@@ -24,6 +24,12 @@ class PaygentTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let imageDownloadExpectation: XCTestExpectation? = self.expectation(description: "download Image")
+        Paygent.createToken() { response in
+            print(response)
+            imageDownloadExpectation?.fulfill()
+        }
+        self.waitForExpectations(timeout: 10, handler: nil)
     }
     
     func testPerformanceExample() {
