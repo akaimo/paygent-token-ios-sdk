@@ -7,182 +7,182 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A20DF6481FBEB232004EBB2F /* paygent_ios_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20DF63E1FBEB232004EBB2F /* paygent_ios_sdk.framework */; };
-		A20DF64D1FBEB232004EBB2F /* paygent_ios_sdkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20DF64C1FBEB232004EBB2F /* paygent_ios_sdkTests.swift */; };
-		A20DF64F1FBEB232004EBB2F /* paygent_ios_sdk.h in Headers */ = {isa = PBXBuildFile; fileRef = A20DF6411FBEB232004EBB2F /* paygent_ios_sdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A20DF66C1FBEB420004EBB2F /* Paygent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20DF6621FBEB420004EBB2F /* Paygent.framework */; };
+		A20DF6711FBEB420004EBB2F /* PaygentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20DF6701FBEB420004EBB2F /* PaygentTests.swift */; };
+		A20DF6731FBEB420004EBB2F /* Paygent.h in Headers */ = {isa = PBXBuildFile; fileRef = A20DF6651FBEB420004EBB2F /* Paygent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A20DF6491FBEB232004EBB2F /* PBXContainerItemProxy */ = {
+		A20DF66D1FBEB420004EBB2F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A20DF6351FBEB232004EBB2F /* Project object */;
+			containerPortal = A20DF6591FBEB420004EBB2F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A20DF63D1FBEB232004EBB2F;
-			remoteInfo = "paygent-ios-sdk";
+			remoteGlobalIDString = A20DF6611FBEB420004EBB2F;
+			remoteInfo = Paygent;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A20DF63E1FBEB232004EBB2F /* paygent_ios_sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = paygent_ios_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A20DF6411FBEB232004EBB2F /* paygent_ios_sdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = paygent_ios_sdk.h; sourceTree = "<group>"; };
-		A20DF6421FBEB232004EBB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A20DF6471FBEB232004EBB2F /* paygent-ios-sdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "paygent-ios-sdkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A20DF64C1FBEB232004EBB2F /* paygent_ios_sdkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paygent_ios_sdkTests.swift; sourceTree = "<group>"; };
-		A20DF64E1FBEB232004EBB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20DF6621FBEB420004EBB2F /* Paygent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Paygent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20DF6651FBEB420004EBB2F /* Paygent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Paygent.h; sourceTree = "<group>"; };
+		A20DF6661FBEB420004EBB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20DF66B1FBEB420004EBB2F /* PaygentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaygentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20DF6701FBEB420004EBB2F /* PaygentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygentTests.swift; sourceTree = "<group>"; };
+		A20DF6721FBEB420004EBB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A20DF63A1FBEB232004EBB2F /* Frameworks */ = {
+		A20DF65E1FBEB420004EBB2F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A20DF6441FBEB232004EBB2F /* Frameworks */ = {
+		A20DF6681FBEB420004EBB2F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A20DF6481FBEB232004EBB2F /* paygent_ios_sdk.framework in Frameworks */,
+				A20DF66C1FBEB420004EBB2F /* Paygent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A20DF6341FBEB232004EBB2F = {
+		A20DF6581FBEB420004EBB2F = {
 			isa = PBXGroup;
 			children = (
-				A20DF6401FBEB232004EBB2F /* paygent-ios-sdk */,
-				A20DF64B1FBEB232004EBB2F /* paygent-ios-sdkTests */,
-				A20DF63F1FBEB232004EBB2F /* Products */,
+				A20DF6641FBEB420004EBB2F /* Paygent */,
+				A20DF66F1FBEB420004EBB2F /* PaygentTests */,
+				A20DF6631FBEB420004EBB2F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A20DF63F1FBEB232004EBB2F /* Products */ = {
+		A20DF6631FBEB420004EBB2F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A20DF63E1FBEB232004EBB2F /* paygent_ios_sdk.framework */,
-				A20DF6471FBEB232004EBB2F /* paygent-ios-sdkTests.xctest */,
+				A20DF6621FBEB420004EBB2F /* Paygent.framework */,
+				A20DF66B1FBEB420004EBB2F /* PaygentTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A20DF6401FBEB232004EBB2F /* paygent-ios-sdk */ = {
+		A20DF6641FBEB420004EBB2F /* Paygent */ = {
 			isa = PBXGroup;
 			children = (
-				A20DF6411FBEB232004EBB2F /* paygent_ios_sdk.h */,
-				A20DF6421FBEB232004EBB2F /* Info.plist */,
+				A20DF6651FBEB420004EBB2F /* Paygent.h */,
+				A20DF6661FBEB420004EBB2F /* Info.plist */,
 			);
-			path = "paygent-ios-sdk";
+			path = Paygent;
 			sourceTree = "<group>";
 		};
-		A20DF64B1FBEB232004EBB2F /* paygent-ios-sdkTests */ = {
+		A20DF66F1FBEB420004EBB2F /* PaygentTests */ = {
 			isa = PBXGroup;
 			children = (
-				A20DF64C1FBEB232004EBB2F /* paygent_ios_sdkTests.swift */,
-				A20DF64E1FBEB232004EBB2F /* Info.plist */,
+				A20DF6701FBEB420004EBB2F /* PaygentTests.swift */,
+				A20DF6721FBEB420004EBB2F /* Info.plist */,
 			);
-			path = "paygent-ios-sdkTests";
+			path = PaygentTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		A20DF63B1FBEB232004EBB2F /* Headers */ = {
+		A20DF65F1FBEB420004EBB2F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A20DF64F1FBEB232004EBB2F /* paygent_ios_sdk.h in Headers */,
+				A20DF6731FBEB420004EBB2F /* Paygent.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A20DF63D1FBEB232004EBB2F /* paygent-ios-sdk */ = {
+		A20DF6611FBEB420004EBB2F /* Paygent */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A20DF6521FBEB232004EBB2F /* Build configuration list for PBXNativeTarget "paygent-ios-sdk" */;
+			buildConfigurationList = A20DF6761FBEB420004EBB2F /* Build configuration list for PBXNativeTarget "Paygent" */;
 			buildPhases = (
-				A20DF6391FBEB232004EBB2F /* Sources */,
-				A20DF63A1FBEB232004EBB2F /* Frameworks */,
-				A20DF63B1FBEB232004EBB2F /* Headers */,
-				A20DF63C1FBEB232004EBB2F /* Resources */,
+				A20DF65D1FBEB420004EBB2F /* Sources */,
+				A20DF65E1FBEB420004EBB2F /* Frameworks */,
+				A20DF65F1FBEB420004EBB2F /* Headers */,
+				A20DF6601FBEB420004EBB2F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "paygent-ios-sdk";
-			productName = "paygent-ios-sdk";
-			productReference = A20DF63E1FBEB232004EBB2F /* paygent_ios_sdk.framework */;
+			name = Paygent;
+			productName = Paygent;
+			productReference = A20DF6621FBEB420004EBB2F /* Paygent.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A20DF6461FBEB232004EBB2F /* paygent-ios-sdkTests */ = {
+		A20DF66A1FBEB420004EBB2F /* PaygentTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A20DF6551FBEB232004EBB2F /* Build configuration list for PBXNativeTarget "paygent-ios-sdkTests" */;
+			buildConfigurationList = A20DF6791FBEB420004EBB2F /* Build configuration list for PBXNativeTarget "PaygentTests" */;
 			buildPhases = (
-				A20DF6431FBEB232004EBB2F /* Sources */,
-				A20DF6441FBEB232004EBB2F /* Frameworks */,
-				A20DF6451FBEB232004EBB2F /* Resources */,
+				A20DF6671FBEB420004EBB2F /* Sources */,
+				A20DF6681FBEB420004EBB2F /* Frameworks */,
+				A20DF6691FBEB420004EBB2F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A20DF64A1FBEB232004EBB2F /* PBXTargetDependency */,
+				A20DF66E1FBEB420004EBB2F /* PBXTargetDependency */,
 			);
-			name = "paygent-ios-sdkTests";
-			productName = "paygent-ios-sdkTests";
-			productReference = A20DF6471FBEB232004EBB2F /* paygent-ios-sdkTests.xctest */;
+			name = PaygentTests;
+			productName = PaygentTests;
+			productReference = A20DF66B1FBEB420004EBB2F /* PaygentTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A20DF6351FBEB232004EBB2F /* Project object */ = {
+		A20DF6591FBEB420004EBB2F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Shuhei Kawaguchi";
 				TargetAttributes = {
-					A20DF63D1FBEB232004EBB2F = {
+					A20DF6611FBEB420004EBB2F = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
-					A20DF6461FBEB232004EBB2F = {
+					A20DF66A1FBEB420004EBB2F = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = A20DF6381FBEB232004EBB2F /* Build configuration list for PBXProject "paygent-ios-sdk" */;
+			buildConfigurationList = A20DF65C1FBEB420004EBB2F /* Build configuration list for PBXProject "Paygent" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = A20DF6341FBEB232004EBB2F;
-			productRefGroup = A20DF63F1FBEB232004EBB2F /* Products */;
+			mainGroup = A20DF6581FBEB420004EBB2F;
+			productRefGroup = A20DF6631FBEB420004EBB2F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A20DF63D1FBEB232004EBB2F /* paygent-ios-sdk */,
-				A20DF6461FBEB232004EBB2F /* paygent-ios-sdkTests */,
+				A20DF6611FBEB420004EBB2F /* Paygent */,
+				A20DF66A1FBEB420004EBB2F /* PaygentTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A20DF63C1FBEB232004EBB2F /* Resources */ = {
+		A20DF6601FBEB420004EBB2F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A20DF6451FBEB232004EBB2F /* Resources */ = {
+		A20DF6691FBEB420004EBB2F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -192,33 +192,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A20DF6391FBEB232004EBB2F /* Sources */ = {
+		A20DF65D1FBEB420004EBB2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A20DF6431FBEB232004EBB2F /* Sources */ = {
+		A20DF6671FBEB420004EBB2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A20DF64D1FBEB232004EBB2F /* paygent_ios_sdkTests.swift in Sources */,
+				A20DF6711FBEB420004EBB2F /* PaygentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A20DF64A1FBEB232004EBB2F /* PBXTargetDependency */ = {
+		A20DF66E1FBEB420004EBB2F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A20DF63D1FBEB232004EBB2F /* paygent-ios-sdk */;
-			targetProxy = A20DF6491FBEB232004EBB2F /* PBXContainerItemProxy */;
+			target = A20DF6611FBEB420004EBB2F /* Paygent */;
+			targetProxy = A20DF66D1FBEB420004EBB2F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		A20DF6501FBEB232004EBB2F /* Debug */ = {
+		A20DF6741FBEB420004EBB2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -278,7 +278,7 @@
 			};
 			name = Debug;
 		};
-		A20DF6511FBEB232004EBB2F /* Release */ = {
+		A20DF6751FBEB420004EBB2F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -331,7 +331,7 @@
 			};
 			name = Release;
 		};
-		A20DF6531FBEB232004EBB2F /* Debug */ = {
+		A20DF6771FBEB420004EBB2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -340,10 +340,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "paygent-ios-sdk/Info.plist";
+				INFOPLIST_FILE = Paygent/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "sk.paygent-ios-sdk";
+				PRODUCT_BUNDLE_IDENTIFIER = sk.Paygent;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -351,7 +351,7 @@
 			};
 			name = Debug;
 		};
-		A20DF6541FBEB232004EBB2F /* Release */ = {
+		A20DF6781FBEB420004EBB2F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
@@ -360,10 +360,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "paygent-ios-sdk/Info.plist";
+				INFOPLIST_FILE = Paygent/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "sk.paygent-ios-sdk";
+				PRODUCT_BUNDLE_IDENTIFIER = sk.Paygent;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -371,26 +371,26 @@
 			};
 			name = Release;
 		};
-		A20DF6561FBEB232004EBB2F /* Debug */ = {
+		A20DF67A1FBEB420004EBB2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "paygent-ios-sdkTests/Info.plist";
+				INFOPLIST_FILE = PaygentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "sk.paygent-ios-sdkTests";
+				PRODUCT_BUNDLE_IDENTIFIER = sk.PaygentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		A20DF6571FBEB232004EBB2F /* Release */ = {
+		A20DF67B1FBEB420004EBB2F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "paygent-ios-sdkTests/Info.plist";
+				INFOPLIST_FILE = PaygentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "sk.paygent-ios-sdkTests";
+				PRODUCT_BUNDLE_IDENTIFIER = sk.PaygentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -400,34 +400,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A20DF6381FBEB232004EBB2F /* Build configuration list for PBXProject "paygent-ios-sdk" */ = {
+		A20DF65C1FBEB420004EBB2F /* Build configuration list for PBXProject "Paygent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A20DF6501FBEB232004EBB2F /* Debug */,
-				A20DF6511FBEB232004EBB2F /* Release */,
+				A20DF6741FBEB420004EBB2F /* Debug */,
+				A20DF6751FBEB420004EBB2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A20DF6521FBEB232004EBB2F /* Build configuration list for PBXNativeTarget "paygent-ios-sdk" */ = {
+		A20DF6761FBEB420004EBB2F /* Build configuration list for PBXNativeTarget "Paygent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A20DF6531FBEB232004EBB2F /* Debug */,
-				A20DF6541FBEB232004EBB2F /* Release */,
+				A20DF6771FBEB420004EBB2F /* Debug */,
+				A20DF6781FBEB420004EBB2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A20DF6551FBEB232004EBB2F /* Build configuration list for PBXNativeTarget "paygent-ios-sdkTests" */ = {
+		A20DF6791FBEB420004EBB2F /* Build configuration list for PBXNativeTarget "PaygentTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A20DF6561FBEB232004EBB2F /* Debug */,
-				A20DF6571FBEB232004EBB2F /* Release */,
+				A20DF67A1FBEB420004EBB2F /* Debug */,
+				A20DF67B1FBEB420004EBB2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A20DF6351FBEB232004EBB2F /* Project object */;
+	rootObject = A20DF6591FBEB420004EBB2F /* Project object */;
 }

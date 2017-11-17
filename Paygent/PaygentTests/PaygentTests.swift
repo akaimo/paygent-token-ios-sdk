@@ -1,15 +1,15 @@
 //
-//  paygent_ios_sdkTests.swift
-//  paygent-ios-sdkTests
+//  PaygentTests.swift
+//  PaygentTests
 //
 //  Created by Shuhei Kawaguchi on 2017/11/17.
 //  Copyright © 2017年 Shuhei Kawaguchi. All rights reserved.
 //
 
 import XCTest
-@testable import paygent_ios_sdk
+@testable import Paygent
 
-class paygent_ios_sdkTests: XCTestCase {
+class PaygentTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
