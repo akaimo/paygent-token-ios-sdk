@@ -15,7 +15,12 @@ public enum Result {
 
 public struct SuccessResponse: Codable {
     let result: String
-    let tokenizedCardObject: TokenizedCard
+    let tokenizedCard: TokenizedCard
+    
+    enum CodingKeys: String, CodingKey {
+        case result
+        case tokenizedCard = "tokenizedCardObject"
+    }
 }
 
 public struct TokenizedCard: Codable {
@@ -25,6 +30,26 @@ public struct TokenizedCard: Codable {
     
     enum CodingKeys: String, CodingKey {
         case maskedCardNumber = "masked_card_number"
+        case token
+        case validUntil = "valid_until"
+    }
+}
+
+public struct SuccessCVCResponse: Codable {
+    let result: String
+    let tokenizedCVC: String
+    
+    enum CodingKeys: String, CodingKey {
+        case result
+        case tokenizedCVC = "tokenizedCardObject"
+    }
+}
+
+public struct TokenizedCVC: Codable {
+    let token: String
+    let validUntil: String
+    
+    enum CodingKeys: String, CodingKey {
         case token
         case validUntil = "valid_until"
     }

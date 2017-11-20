@@ -30,7 +30,7 @@ class PaygentTests: XCTestCase {
             var cardExpireMonth: String
             var cardCVC: String
             var cardName: String
-            
+
             init(cardNumber: String, cardExpireYear: String, cardExpireMonth: String, cardCVC: String, cardName: String) {
                 self.cardNumber = cardNumber
                 self.cardExpireYear = cardExpireYear
@@ -49,11 +49,38 @@ class PaygentTests: XCTestCase {
                 return true
             }
         }
-        
+
         let request = TestRequest(cardNumber: "4900123412341234", cardExpireYear: "18",
                                   cardExpireMonth: "10", cardCVC: "000", cardName: "test")
-        
+
         let imageDownloadExpectation: XCTestExpectation? = self.expectation(description: "paygent access")
+        Paygent.createToken(request) { response in
+            print(response)
+            imageDownloadExpectation?.fulfill()
+        }
+        self.waitForExpectations(timeout: 10, handler: nil)
+    }
+    
+    func testCVCToken() {
+        struct TestCVCRequest: CVCTokenRequest {
+            var cardCVC: String
+            var cvcOnlyFlg: String
+            init(cardCVC: String, cvcOnlyFlg: String) {
+                self.cardCVC = cardCVC
+                self.cvcOnlyFlg = cvcOnlyFlg
+            }
+            
+            var merchantID: String {
+                return ""
+            }
+            var tokenGenerateKey: String {
+                return ""
+            }
+        }
+        
+        let request = TestCVCRequest(cardCVC: "123", cvcOnlyFlg: "1")
+        
+        let imageDownloadExpectation: XCTestExpectation? = self.expectation(description: "paygent cvc access")
         Paygent.createToken(request) { response in
             print(response)
             imageDownloadExpectation?.fulfill()

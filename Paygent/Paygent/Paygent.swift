@@ -15,6 +15,7 @@ open class Paygent {
         return privateShared
     }
     
+    @discardableResult
     open class func createToken(_ request: Request, handler: @escaping (Result) -> Void = { _ in }) -> URLSessionDataTask {
         var urlRequest = URLRequest(url: URL(string: request.url)!)
 

@@ -48,12 +48,13 @@ public extension TokenRequest {
 }
 
 public protocol CVCTokenRequest: Request {
+    var cardCVC: String { get set }
     var cvcOnlyFlg: String { get set }
-    init(cvcOnlyFlg: String)
+    init(cardCVC: String, cvcOnlyFlg: String)
 }
 
 public extension CVCTokenRequest {
     func createBodyParameter() -> String {
-        return "merchant_id=" + merchantID + "&token_generate_key=" + tokenGenerateKey + "&card_cvc=" + "&cvc_only_flg=" + cvcOnlyFlg
+        return "merchant_id=" + merchantID + "&token_generate_key=" + tokenGenerateKey + "&card_cvc=" + cardCVC + "&cvc_only_flg=" + cvcOnlyFlg
     }
 }
