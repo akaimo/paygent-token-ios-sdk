@@ -15,7 +15,7 @@ open class Paygent {
         return privateShared
     }
     
-    open class func createToken(_ request: Request, handler: @escaping (Bool) -> Void = { _ in }) {
+    open class func createToken(_ request: Request, handler: @escaping (Response) -> Void = { _ in }) {
         var urlRequest = URLRequest(url: URL(string: request.url)!)
 
         urlRequest.setValue("text/plain;charset=UTF-8", forHTTPHeaderField: "Content-Type")
@@ -25,7 +25,7 @@ open class Paygent {
         let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
             let response = String(data: data!, encoding: .utf8)!
             print(response)
-            handler(true)
+            handler(.success(SuccessResponse(result: "test")))
         }
         task.resume()
     }
