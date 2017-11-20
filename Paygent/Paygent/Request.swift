@@ -33,11 +33,12 @@ public extension Request {
 }
 
 public protocol TokenRequest: Request {
-    var cardNumber: String { get }
-    var cardExpireYear: String { get }
-    var cardExpireMonth: String { get }
-    var cardCVC: String { get }
-    var cardName: String { get }
+    var cardNumber: String { get set }
+    var cardExpireYear: String { get set }
+    var cardExpireMonth: String { get set }
+    var cardCVC: String { get set }
+    var cardName: String { get set }
+    init(cardNumber: String, cardExpireYear: String, cardExpireMonth: String, cardCVC: String, cardName: String)
 }
 
 public extension TokenRequest {

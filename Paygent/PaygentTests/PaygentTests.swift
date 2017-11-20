@@ -25,33 +25,33 @@ class PaygentTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         struct TestRequest: TokenRequest {
+            var cardNumber: String
+            var cardExpireYear: String
+            var cardExpireMonth: String
+            var cardCVC: String
+            var cardName: String
+            
+            init(cardNumber: String, cardExpireYear: String, cardExpireMonth: String, cardCVC: String, cardName: String) {
+                self.cardNumber = cardNumber
+                self.cardExpireYear = cardExpireYear
+                self.cardExpireMonth = cardExpireMonth
+                self.cardCVC = cardCVC
+                self.cardName = cardName
+            }
+
             var merchantID: String {
                 return ""
             }
             var tokenGenerateKey: String {
                 return ""
             }
-            var cardNumber: String {
-                return "4900123412341234"
-            }
-            var cardExpireYear: String {
-                return "18"
-            }
-            var cardExpireMonth: String {
-                return "10"
-            }
-            var cardCVC: String {
-                return "000"
-            }
-            var cardName: String {
-                return "test"
-            }
             var isSandbox: Bool {
                 return true
             }
         }
         
-        let request = TestRequest()
+        let request = TestRequest(cardNumber: "4900123412341234", cardExpireYear: "18",
+                                  cardExpireMonth: "10", cardCVC: "000", cardName: "test")
         
         let imageDownloadExpectation: XCTestExpectation? = self.expectation(description: "paygent access")
         Paygent.createToken(request) { response in
