@@ -43,7 +43,6 @@ open class PaygentSession {
                 } else if let response = String(data: data, encoding: .utf8) {
                     result =  .failure(ResponseError.unexpectedObject(response))
                 } else {
-                    // FIXME: change error
                     result =  .failure(ResponseError.unexpectedObject(data))
                 }
                 

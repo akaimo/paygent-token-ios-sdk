@@ -68,5 +68,4 @@ public enum ResponseError: Error {
 
 public enum SessionTaskError: Error {
     case connectionError(Error)
-    case responseError(Error)
 }
