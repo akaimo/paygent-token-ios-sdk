@@ -23,9 +23,10 @@ open class Paygent {
         urlRequest.httpBody = request.createBodyParameter().data(using: .utf8)
 
         let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-            let response = String(data: data!, encoding: .utf8)!
+//            let response = String(data: data!, encoding: .utf8)!
+            let response = try? JSONDecoder().decode(SuccessResponse.self, from: data!)
             print(response)
-            handler(.success(SuccessResponse(result: "test")))
+            handler(.failure(FailureResponse(result: "test")))
         }
         task.resume()
     }

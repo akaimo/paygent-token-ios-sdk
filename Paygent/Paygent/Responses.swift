@@ -13,8 +13,21 @@ public enum Response {
     case failure(FailureResponse)
 }
 
-public struct SuccessResponse {
+public struct SuccessResponse: Codable {
     let result: String
+    let tokenizedCardObject: TokenizedCard
+}
+
+public struct TokenizedCard: Codable {
+    let maskedCardNumber: String
+    let token: String
+    let validUntil: String
+    
+    enum CodingKeys: String, CodingKey {
+        case maskedCardNumber = "masked_card_number"
+        case token
+        case validUntil = "valid_until"
+    }
 }
 
 public struct FailureResponse {
