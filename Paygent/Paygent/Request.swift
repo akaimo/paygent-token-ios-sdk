@@ -35,7 +35,7 @@ public extension Request {
 
 
 
-public protocol TokenRequest: Request {
+public protocol CardTokenRequest: Request {
     var cardNumber: String { get set }
     var cardExpireYear: String { get set }
     var cardExpireMonth: String { get set }
@@ -45,8 +45,8 @@ public protocol TokenRequest: Request {
     init(cardNumber: String, cardExpireYear: String, cardExpireMonth: String, cardCVC: String, cardName: String)
 }
 
-public extension TokenRequest {
-    typealias Response = CreateTokenResponse
+public extension CardTokenRequest {
+    typealias Response = CreateCardTokenResponse
     
     func createBodyParameter() -> String {
         return "merchant_id=" + merchantID + "&token_generate_key=" + tokenGenerateKey + "&card_number=" + cardNumber + "&card_expire_year=" + cardExpireYear + "&card_expire_month=" + cardExpireMonth + "&card_cvc=" + cardCVC + "&card_name=" + cardName

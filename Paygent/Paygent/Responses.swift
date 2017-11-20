@@ -13,7 +13,8 @@ public enum Result<T> {
     case failure(Error)
 }
 
-public struct CreateTokenResponse: Codable {
+
+public struct CreateCardTokenResponse: Codable {
     let result: String
     let tokenizedCard: TokenizedCard
     
@@ -35,6 +36,7 @@ public struct TokenizedCard: Codable {
     }
 }
 
+
 public struct CreateCVCTokenResponse: Codable {
     let result: String
     let tokenizedCVC: String
@@ -55,9 +57,11 @@ public struct TokenizedCVC: Codable {
     }
 }
 
+
 public struct PagentErrorResponse: Codable {
     let result: String
 }
+
 
 public enum ResponseError: Error {
     case nonHTTPURLResponse(URLResponse?)

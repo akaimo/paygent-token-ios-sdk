@@ -24,7 +24,7 @@ class PaygentTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        struct TestRequest: TokenRequest {
+        struct TestRequest: CardTokenRequest {
             var cardNumber: String
             var cardExpireYear: String
             var cardExpireMonth: String
