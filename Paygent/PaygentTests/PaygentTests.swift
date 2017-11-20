@@ -21,9 +21,7 @@ class PaygentTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testCardToken() {
         struct TestRequest: CardTokenRequest {
             var cardNumber: String
             var cardExpireYear: String
@@ -53,10 +51,15 @@ class PaygentTests: XCTestCase {
         let request = TestRequest(cardNumber: "4900123412341234", cardExpireYear: "18",
                                   cardExpireMonth: "10", cardCVC: "000", cardName: "test")
 
-        let imageDownloadExpectation: XCTestExpectation? = self.expectation(description: "paygent access")
-        PaygentSession.createToken(request) { response in
-            print(response)
-            imageDownloadExpectation?.fulfill()
+        let cardTokenExpectation: XCTestExpectation? = self.expectation(description: "paygent card token")
+        PaygentSession.createToken(request) { result in
+            switch result {
+            case .success(let response):
+                print(response)
+            case .failure(let error):
+                print(error)
+            }
+            cardTokenExpectation?.fulfill()
         }
         self.waitForExpectations(timeout: 10, handler: nil)
     }
@@ -80,10 +83,15 @@ class PaygentTests: XCTestCase {
         
         let request = TestCVCRequest(cardCVC: "123", cvcOnlyFlg: "1")
         
-        let imageDownloadExpectation: XCTestExpectation? = self.expectation(description: "paygent cvc access")
-        PaygentSession.createToken(request) { response in
-            print(response)
-            imageDownloadExpectation?.fulfill()
+        let cvcTokenExpectation: XCTestExpectation? = self.expectation(description: "paygent cvc token")
+        PaygentSession.createToken(request) { result in
+            switch result {
+            case .success(let response):
+                print(response)
+            case .failure(let error):
+                print(error)
+            }
+            cvcTokenExpectation?.fulfill()
         }
         self.waitForExpectations(timeout: 10, handler: nil)
     }
