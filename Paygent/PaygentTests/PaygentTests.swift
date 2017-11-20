@@ -56,8 +56,16 @@ class PaygentTests: XCTestCase {
             switch result {
             case .success(let response):
                 print(response)
-            case .failure(let error):
-                print(error)
+                XCTFail()
+            case .failure(let error as ResponseError):
+                switch error {
+                case .paygentErrorCode(let code):
+                    XCTAssertEqual(code, "1200")
+                default:
+                    XCTFail()
+                }
+            case .failure(_):
+                XCTFail()
             }
             cardTokenExpectation?.fulfill()
         }
@@ -88,8 +96,16 @@ class PaygentTests: XCTestCase {
             switch result {
             case .success(let response):
                 print(response)
-            case .failure(let error):
-                print(error)
+                XCTFail()
+            case .failure(let error as ResponseError):
+                switch error {
+                case .paygentErrorCode(let code):
+                    XCTAssertEqual(code, "1200")
+                default:
+                    XCTFail()
+                }
+            case .failure(_):
+                XCTFail()
             }
             cvcTokenExpectation?.fulfill()
         }
