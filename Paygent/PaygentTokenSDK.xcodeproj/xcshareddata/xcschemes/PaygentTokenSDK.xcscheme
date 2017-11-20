@@ -29,7 +29,26 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A20DF66A1FBEB420004EBB2F"
+               BuildableName = "PaygentTokenSDKTests.xctest"
+               BlueprintName = "PaygentTokenSDKTests"
+               ReferencedContainer = "container:PaygentTokenSDK.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A20DF6611FBEB420004EBB2F"
+            BuildableName = "PaygentTokenSDK.framework"
+            BlueprintName = "PaygentTokenSDK"
+            ReferencedContainer = "container:PaygentTokenSDK.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Paygent
+@testable import PaygentTokenSDK
 
 class PaygentTests: XCTestCase {
     
