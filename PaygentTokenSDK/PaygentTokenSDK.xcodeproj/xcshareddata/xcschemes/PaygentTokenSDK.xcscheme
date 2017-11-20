@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A20DF6611FBEB420004EBB2F"
-               BuildableName = "Paygent.framework"
-               BlueprintName = "Paygent"
-               ReferencedContainer = "container:Paygent.xcodeproj">
+               BuildableName = "PaygentTokenSDK.framework"
+               BlueprintName = "PaygentTokenSDK"
+               ReferencedContainer = "container:PaygentTokenSDK.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A20DF66A1FBEB420004EBB2F"
-               BuildableName = "PaygentTests.xctest"
-               BlueprintName = "PaygentTests"
-               ReferencedContainer = "container:Paygent.xcodeproj">
+               BuildableName = "PaygentTokenSDKTests.xctest"
+               BlueprintName = "PaygentTokenSDKTests"
+               ReferencedContainer = "container:PaygentTokenSDK.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A20DF6611FBEB420004EBB2F"
-            BuildableName = "Paygent.framework"
-            BlueprintName = "Paygent"
-            ReferencedContainer = "container:Paygent.xcodeproj">
+            BuildableName = "PaygentTokenSDK.framework"
+            BlueprintName = "PaygentTokenSDK"
+            ReferencedContainer = "container:PaygentTokenSDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -67,9 +67,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A20DF6611FBEB420004EBB2F"
-            BuildableName = "Paygent.framework"
-            BlueprintName = "Paygent"
-            ReferencedContainer = "container:Paygent.xcodeproj">
+            BuildableName = "PaygentTokenSDK.framework"
+            BlueprintName = "PaygentTokenSDK"
+            ReferencedContainer = "container:PaygentTokenSDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A20DF6611FBEB420004EBB2F"
-            BuildableName = "Paygent.framework"
-            BlueprintName = "Paygent"
-            ReferencedContainer = "container:Paygent.xcodeproj">
+            BuildableName = "PaygentTokenSDK.framework"
+            BlueprintName = "PaygentTokenSDK"
+            ReferencedContainer = "container:PaygentTokenSDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
