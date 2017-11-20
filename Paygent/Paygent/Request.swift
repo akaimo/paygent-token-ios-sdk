@@ -12,7 +12,24 @@ public protocol Request {
     var merchantID: String { get }
     var tokenGenerateKey: String { get }
     
+    var isSandbox: Bool { get }
+    var url: String { get }
+    
     func createBodyParameter() -> String
+}
+
+public extension Request {
+    var isSandbox: Bool {
+        return false
+    }
+    
+    var url: String {
+        if isSandbox {
+            return "https://sandbox.paygent.co.jp/n/token/request"
+        } else {
+            return "https://token.paygent.co.jp/n/token/request"
+        }
+    }
 }
 
 public protocol TokenRequest: Request {
