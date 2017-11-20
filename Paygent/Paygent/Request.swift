@@ -9,9 +9,10 @@
 import Foundation
 
 public protocol Request {
+    associatedtype Response: Codable
+    
     var merchantID: String { get }
     var tokenGenerateKey: String { get }
-    
     var isSandbox: Bool { get }
     var url: String { get }
     
@@ -32,28 +33,38 @@ public extension Request {
     }
 }
 
+
+
 public protocol TokenRequest: Request {
     var cardNumber: String { get set }
     var cardExpireYear: String { get set }
     var cardExpireMonth: String { get set }
     var cardCVC: String { get set }
     var cardName: String { get set }
+    
     init(cardNumber: String, cardExpireYear: String, cardExpireMonth: String, cardCVC: String, cardName: String)
 }
 
 public extension TokenRequest {
+    typealias Response = CreateTokenResponse
+    
     func createBodyParameter() -> String {
         return "merchant_id=" + merchantID + "&token_generate_key=" + tokenGenerateKey + "&card_number=" + cardNumber + "&card_expire_year=" + cardExpireYear + "&card_expire_month=" + cardExpireMonth + "&card_cvc=" + cardCVC + "&card_name=" + cardName
     }
 }
 
+
+
 public protocol CVCTokenRequest: Request {
     var cardCVC: String { get set }
     var cvcOnlyFlg: String { get set }
+    
     init(cardCVC: String, cvcOnlyFlg: String)
 }
 
 public extension CVCTokenRequest {
+    typealias Response = CreateCVCTokenResponse
+    
     func createBodyParameter() -> String {
         return "merchant_id=" + merchantID + "&token_generate_key=" + tokenGenerateKey + "&card_cvc=" + cardCVC + "&cvc_only_flg=" + cvcOnlyFlg
     }

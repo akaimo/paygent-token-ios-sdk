@@ -8,12 +8,12 @@
 
 import Foundation
 
-public enum Result {
-    case success(SuccessResponse)
+public enum Result<T> {
+    case success(T)
     case failure(Error)
 }
 
-public struct SuccessResponse: Codable {
+public struct CreateTokenResponse: Codable {
     let result: String
     let tokenizedCard: TokenizedCard
     
@@ -35,7 +35,7 @@ public struct TokenizedCard: Codable {
     }
 }
 
-public struct SuccessCVCResponse: Codable {
+public struct CreateCVCTokenResponse: Codable {
     let result: String
     let tokenizedCVC: String
     

@@ -8,15 +8,15 @@
 
 import Foundation
 
-open class Paygent {
-    private static let privateShared = Paygent()
+open class PaygentSession {
+    private static let privateShared = PaygentSession()
     
-    open class var shared: Paygent {
+    open class var shared: PaygentSession {
         return privateShared
     }
     
     @discardableResult
-    open class func createToken(_ request: Request, handler: @escaping (Result) -> Void = { _ in }) -> URLSessionDataTask {
+    open class func createToken<Request: Paygent.Request>(_ request: Request, handler: @escaping (Result<Request.Response>) -> Void = { _ in }) -> URLSessionDataTask {
         var urlRequest = URLRequest(url: URL(string: request.url)!)
 
         urlRequest.setValue("text/plain;charset=UTF-8", forHTTPHeaderField: "Content-Type")
@@ -24,7 +24,7 @@ open class Paygent {
         urlRequest.httpBody = request.createBodyParameter().data(using: .utf8)
 
         let task = URLSession.shared.dataTask(with: urlRequest) { data, urlResponse, error in
-            let result: Result
+            let result: Result<Request.Response>
             
             switch (data, urlResponse, error) {
             case (_, _, let error?):
@@ -36,7 +36,7 @@ open class Paygent {
                     break
                 }
                 
-                if let response = try? JSONDecoder().decode(SuccessResponse.self, from: data) {
+                if let response = try? JSONDecoder().decode(Request.Response.self, from: data) {
                     result = .success(response)
                 } else if let response = try? JSONDecoder().decode(PagentErrorResponse.self, from: data) {
                     result = .failure(ResponseError.paygentErrorCode(response.result))

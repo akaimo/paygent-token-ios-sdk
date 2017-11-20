@@ -54,7 +54,7 @@ class PaygentTests: XCTestCase {
                                   cardExpireMonth: "10", cardCVC: "000", cardName: "test")
 
         let imageDownloadExpectation: XCTestExpectation? = self.expectation(description: "paygent access")
-        Paygent.createToken(request) { response in
+        PaygentSession.createToken(request) { response in
             print(response)
             imageDownloadExpectation?.fulfill()
         }
@@ -81,7 +81,7 @@ class PaygentTests: XCTestCase {
         let request = TestCVCRequest(cardCVC: "123", cvcOnlyFlg: "1")
         
         let imageDownloadExpectation: XCTestExpectation? = self.expectation(description: "paygent cvc access")
-        Paygent.createToken(request) { response in
+        PaygentSession.createToken(request) { response in
             print(response)
             imageDownloadExpectation?.fulfill()
         }
