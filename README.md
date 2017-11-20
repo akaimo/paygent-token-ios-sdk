@@ -21,3 +21,44 @@ github "akaimo/paygent-ios-sdk"
 ```
 pod 'PaygentTokenSDK', '~> 1.0.0'
 ```
+
+## Usage
+This can be used like [APIKit](https://github.com/ishkawa/APIKit)
+```swift
+extension PaygentTokenSDK.Request {
+    var merchantID: String {
+        return "marchant_id"
+    }
+    var tokenGenerateKey: String {
+        return "token_generate_key"
+    }
+}
+
+struct CardTokenRequest: PaygentTokenSDK.CardTokenRequest {
+    var cardNumber: String
+    var cardExpireYear: String
+    var cardExpireMonth: String
+    var cardCVC: String
+    var cardName: String
+    
+    init(cardNumber: String, cardExpireYear: String, cardExpireMonth: String,
+         cardCVC: String, cardName: String) {
+        self.cardNumber = cardNumber
+        self.cardExpireYear = cardExpireYear
+        self.cardExpireMonth = cardExpireMonth
+        self.cardCVC = cardCVC
+        self.cardName = cardName
+    }
+}
+
+let request = CardTokenRequest(cardNumber: "4900123412341234", cardExpireYear: "19",
+                               cardExpireMonth: "10", cardCVC: "", cardName: "")
+PaygentSession.createToken(request) { result in
+    switch result {
+    case .success(let response):
+        // success code...
+    case .failure(let error):
+        // failure code...
+    }
+}
+```
