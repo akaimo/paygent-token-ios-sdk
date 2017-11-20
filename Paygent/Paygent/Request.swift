@@ -23,6 +23,18 @@ public protocol TokenRequest: Request {
     var cardName: String { get }
 }
 
+public extension TokenRequest {
+    func createBodyParameter() -> String {
+        return "merchant_id=" + merchantID + "&token_generate_key=" + tokenGenerateKey + "&card_number=" + cardNumber + "&card_expire_year=" + cardExpireYear + "&card_expire_month=" + cardExpireMonth + "&card_cvc=" + cardCVC + "&card_name=" + cardName
+    }
+}
+
 public protocol CVCTokenRequest: Request {
-    var cvcOnlyFlg: Int { get }
+    var cvcOnlyFlg: String { get }
+}
+
+public extension CVCTokenRequest {
+    func createBodyParameter() -> String {
+        return "merchant_id=" + merchantID + "&token_generate_key=" + tokenGenerateKey + "&card_cvc=" + "&cvc_only_flg=" + cvcOnlyFlg
+    }
 }
