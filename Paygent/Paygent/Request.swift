@@ -48,7 +48,8 @@ public extension TokenRequest {
 }
 
 public protocol CVCTokenRequest: Request {
-    var cvcOnlyFlg: String { get }
+    var cvcOnlyFlg: String { get set }
+    init(cvcOnlyFlg: String)
 }
 
 public extension CVCTokenRequest {
