@@ -11,6 +11,7 @@
 		A20DF6711FBEB420004EBB2F /* PaygentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20DF6701FBEB420004EBB2F /* PaygentTests.swift */; };
 		A20DF6731FBEB420004EBB2F /* Paygent.h in Headers */ = {isa = PBXBuildFile; fileRef = A20DF6651FBEB420004EBB2F /* Paygent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A20DF67D1FBEB79B004EBB2F /* Paygent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20DF67C1FBEB79B004EBB2F /* Paygent.swift */; };
+		A20DF67F1FBECE13004EBB2F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20DF67E1FBECE13004EBB2F /* Request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		A20DF6701FBEB420004EBB2F /* PaygentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaygentTests.swift; sourceTree = "<group>"; };
 		A20DF6721FBEB420004EBB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A20DF67C1FBEB79B004EBB2F /* Paygent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paygent.swift; sourceTree = "<group>"; };
+		A20DF67E1FBECE13004EBB2F /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			children = (
 				A20DF6651FBEB420004EBB2F /* Paygent.h */,
 				A20DF67C1FBEB79B004EBB2F /* Paygent.swift */,
+				A20DF67E1FBECE13004EBB2F /* Request.swift */,
 				A20DF6661FBEB420004EBB2F /* Info.plist */,
 			);
 			path = Paygent;
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A20DF67D1FBEB79B004EBB2F /* Paygent.swift in Sources */,
+				A20DF67F1FBECE13004EBB2F /* Request.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
