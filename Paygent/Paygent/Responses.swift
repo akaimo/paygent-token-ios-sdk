@@ -8,9 +8,9 @@
 
 import Foundation
 
-public enum Response {
+public enum Result {
     case success(SuccessResponse)
-    case failure(FailureResponse)
+    case failure(Error)
 }
 
 public struct SuccessResponse: Codable {
@@ -30,6 +30,18 @@ public struct TokenizedCard: Codable {
     }
 }
 
-public struct FailureResponse {
+public struct PagentErrorResponse: Codable {
     let result: String
+}
+
+public enum ResponseError: Error {
+    case nonHTTPURLResponse(URLResponse?)
+    case unacceptableStatusCode(Int)
+    case unexpectedObject(Any)
+    case paygentErrorCode(String)
+}
+
+public enum SessionTaskError: Error {
+    case connectionError(Error)
+    case responseError(Error)
 }
