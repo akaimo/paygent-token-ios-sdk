@@ -15,8 +15,8 @@ public enum Result<T> {
 
 
 public struct CreateCardTokenResponse: Codable {
-    let result: String
-    let tokenizedCard: TokenizedCard
+    public let result: String
+    public let tokenizedCard: TokenizedCard
     
     enum CodingKeys: String, CodingKey {
         case result
@@ -25,9 +25,9 @@ public struct CreateCardTokenResponse: Codable {
 }
 
 public struct TokenizedCard: Codable {
-    let maskedCardNumber: String
-    let token: String
-    let validUntil: String
+    public let maskedCardNumber: String
+    public let token: String
+    public let validUntil: String
     
     enum CodingKeys: String, CodingKey {
         case maskedCardNumber = "masked_card_number"
@@ -38,8 +38,8 @@ public struct TokenizedCard: Codable {
 
 
 public struct CreateCVCTokenResponse: Codable {
-    let result: String
-    let tokenizedCVC: String
+    public let result: String
+    public let tokenizedCVC: String
     
     enum CodingKeys: String, CodingKey {
         case result
@@ -48,8 +48,8 @@ public struct CreateCVCTokenResponse: Codable {
 }
 
 public struct TokenizedCVC: Codable {
-    let token: String
-    let validUntil: String
+    public let token: String
+    public let validUntil: String
     
     enum CodingKeys: String, CodingKey {
         case token
@@ -59,7 +59,7 @@ public struct TokenizedCVC: Codable {
 
 
 public struct PagentErrorResponse: Codable {
-    let result: String
+    public let result: String
 }
 
 
