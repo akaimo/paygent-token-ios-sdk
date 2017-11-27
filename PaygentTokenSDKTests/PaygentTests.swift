@@ -52,7 +52,7 @@ class PaygentTests: XCTestCase {
                                   cardExpireMonth: "10", cardCVC: "000", cardName: "test")
 
         let cardTokenExpectation: XCTestExpectation? = self.expectation(description: "paygent card token")
-        PaygentSession.createToken(request) { result in
+        PaygentSession.send(request) { result in
             switch result {
             case .success(let response):
                 print(response)
@@ -89,7 +89,7 @@ class PaygentTests: XCTestCase {
         let request = TestCVCRequest(cardCVC: "123", cvcOnlyFlg: "1")
         
         let cvcTokenExpectation: XCTestExpectation? = self.expectation(description: "paygent cvc token")
-        PaygentSession.createToken(request) { result in
+        PaygentSession.send(request) { result in
             switch result {
             case .success(let response):
                 print(response)

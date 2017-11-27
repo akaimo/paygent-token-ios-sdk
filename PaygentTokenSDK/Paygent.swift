@@ -16,7 +16,7 @@ open class PaygentSession {
     }
     
     @discardableResult
-    open class func createToken<Request: PaygentTokenSDK.Request>(_ request: Request, handler: @escaping (Result<Request.Response>) -> Void = { _ in }) -> URLSessionDataTask {
+    open class func send<Request: PaygentTokenSDK.Request>(_ request: Request, handler: @escaping (Result<Request.Response>) -> Void = { _ in }) -> URLSessionDataTask {
         var urlRequest = URLRequest(url: URL(string: request.url)!)
 
         urlRequest.setValue("text/plain;charset=UTF-8", forHTTPHeaderField: "Content-Type")
