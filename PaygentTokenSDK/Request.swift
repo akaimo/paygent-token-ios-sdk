@@ -35,7 +35,7 @@ public extension Request {
 
 
 
-public protocol CardTokenRequest: Request {
+public protocol PaygentTokenRequest: Request {
     var cardNumber: String { get set }
     var cardExpireYear: String { get set }
     var cardExpireMonth: String { get set }
@@ -43,7 +43,7 @@ public protocol CardTokenRequest: Request {
     var cardName: String { get set }
 }
 
-public extension CardTokenRequest {
+public extension PaygentTokenRequest {
     typealias Response = PaygentCardTokenResponse
     
     func createBodyParameter() -> String {
@@ -53,12 +53,12 @@ public extension CardTokenRequest {
 
 
 
-public protocol CVCTokenRequest: Request {
+public protocol PaygentCVCTokenRequest: Request {
     var cardCVC: String { get set }
     var cvcOnlyFlg: String { get set }
 }
 
-public extension CVCTokenRequest {
+public extension PaygentCVCTokenRequest {
     typealias Response = PaygentCVCTokenResponse
     
     func createBodyParameter() -> String {
