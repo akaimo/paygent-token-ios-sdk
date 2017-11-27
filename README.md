@@ -14,12 +14,12 @@ This is not an official Paygent product.
 ## Installation
 #### [Carthage](https://github.com/Carthage/Carthage)
 ```
-github "akaimo/paygent-ios-sdk"
+github "akaimo/paygent-ios-sdk" ~> 1.1.0
 ```
 
 #### [CocoaPods](https://github.com/cocoapods/cocoapods)
 ```
-pod 'PaygentTokenSDK', '~> 1.0.0'
+pod 'PaygentTokenSDK', '~> 1.1.0'
 ```
 
 ## Usage
@@ -34,7 +34,7 @@ extension PaygentTokenSDK.Request {
     }
 }
 
-struct CardTokenRequest: PaygentTokenSDK.CardTokenRequest {
+struct CardTokenRequest: PaygentTokenSDK.PaygentTokenRequest {
     var cardNumber: String
     var cardExpireYear: String
     var cardExpireMonth: String
@@ -53,7 +53,7 @@ struct CardTokenRequest: PaygentTokenSDK.CardTokenRequest {
 
 let request = CardTokenRequest(cardNumber: "4900123412341234", cardExpireYear: "19",
                                cardExpireMonth: "10", cardCVC: "", cardName: "")
-PaygentSession.createToken(request) { result in
+PaygentSession.send(request) { result in
     switch result {
     case .success(let response):
         // success code...
