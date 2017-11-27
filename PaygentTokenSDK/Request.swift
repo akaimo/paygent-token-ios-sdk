@@ -41,8 +41,6 @@ public protocol CardTokenRequest: Request {
     var cardExpireMonth: String { get set }
     var cardCVC: String { get set }
     var cardName: String { get set }
-    
-    init(cardNumber: String, cardExpireYear: String, cardExpireMonth: String, cardCVC: String, cardName: String)
 }
 
 public extension CardTokenRequest {
@@ -58,8 +56,6 @@ public extension CardTokenRequest {
 public protocol CVCTokenRequest: Request {
     var cardCVC: String { get set }
     var cvcOnlyFlg: String { get set }
-    
-    init(cardCVC: String, cvcOnlyFlg: String)
 }
 
 public extension CVCTokenRequest {
