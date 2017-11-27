@@ -22,7 +22,7 @@ class PaygentTests: XCTestCase {
     }
     
     func testCardToken() {
-        struct TestRequest: CardTokenRequest {
+        struct TestRequest: PaygentTokenRequest {
             var cardNumber: String
             var cardExpireYear: String
             var cardExpireMonth: String
@@ -57,13 +57,10 @@ class PaygentTests: XCTestCase {
             case .success(let response):
                 print(response)
                 XCTFail()
-            case .failure(let error as ResponseError):
-                switch error {
-                case .paygentErrorCode(let code):
-                    XCTAssertEqual(code, "1200")
-                default:
-                    XCTFail()
-                }
+            case .failure(let error as SessionTaskError):
+                guard case .responseError(let e) = error else { return XCTFail() }
+                guard case ResponseError.paygentErrorCode(let code) = e else { return XCTFail() }
+                XCTAssertEqual(code, "1200")
             case .failure(_):
                 XCTFail()
             }
@@ -73,7 +70,7 @@ class PaygentTests: XCTestCase {
     }
     
     func testCVCToken() {
-        struct TestCVCRequest: CVCTokenRequest {
+        struct TestCVCRequest: PaygentCVCTokenRequest {
             var cardCVC: String
             var cvcOnlyFlg: String
             init(cardCVC: String, cvcOnlyFlg: String) {
@@ -97,13 +94,10 @@ class PaygentTests: XCTestCase {
             case .success(let response):
                 print(response)
                 XCTFail()
-            case .failure(let error as ResponseError):
-                switch error {
-                case .paygentErrorCode(let code):
-                    XCTAssertEqual(code, "1200")
-                default:
-                    XCTFail()
-                }
+            case .failure(let error as SessionTaskError):
+                guard case .responseError(let e) = error else { return XCTFail() }
+                guard case ResponseError.paygentErrorCode(let code) = e else { return XCTFail() }
+                XCTAssertEqual(code, "1200")
             case .failure(_):
                 XCTFail()
             }
