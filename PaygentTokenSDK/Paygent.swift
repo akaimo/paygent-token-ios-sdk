@@ -32,23 +32,23 @@ open class PaygentSession {
                 
             case (let data?, let urlResponse as HTTPURLResponse, _):
                 guard 200..<300 ~= urlResponse.statusCode else {
-                    result = .failure(ResponseError.unacceptableStatusCode(urlResponse.statusCode))
+                    result = .failure(SessionTaskError.responseError(ResponseError.unacceptableStatusCode(urlResponse.statusCode)))
                     break
                 }
                 
                 if let response = try? JSONDecoder().decode(Request.Response.self, from: data) {
                     result = .success(response)
                 } else if let response = try? JSONDecoder().decode(PagentErrorResponse.self, from: data) {
-                    result = .failure(ResponseError.paygentErrorCode(response.result))
+                    result = .failure(SessionTaskError.responseError(ResponseError.paygentErrorCode(response.result)))
                 } else if let response = String(data: data, encoding: .utf8) {
-                    result =  .failure(ResponseError.unexpectedObject(response))
+                    result =  .failure(SessionTaskError.responseError(ResponseError.unexpectedObject(response)))
                 } else {
-                    result =  .failure(ResponseError.unexpectedObject(data))
+                    result =  .failure(SessionTaskError.responseError(ResponseError.unexpectedObject(data)))
                 }
                 
                 
             default:
-                result = .failure(ResponseError.nonHTTPURLResponse(urlResponse))
+                result = .failure(SessionTaskError.responseError(ResponseError.nonHTTPURLResponse(urlResponse)))
             }
             
             handler(result)

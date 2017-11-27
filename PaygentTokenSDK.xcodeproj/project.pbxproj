@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99EDCB5B1FCC1E4F004A0E9D /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EDCB5A1FCC1E4F004A0E9D /* Errors.swift */; };
 		A20DF66C1FBEB420004EBB2F /* PaygentTokenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20DF6621FBEB420004EBB2F /* PaygentTokenSDK.framework */; };
 		A20DF6711FBEB420004EBB2F /* PaygentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20DF6701FBEB420004EBB2F /* PaygentTests.swift */; };
 		A20DF6731FBEB420004EBB2F /* Paygent.h in Headers */ = {isa = PBXBuildFile; fileRef = A20DF6651FBEB420004EBB2F /* Paygent.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		99EDCB5A1FCC1E4F004A0E9D /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		A20DF6621FBEB420004EBB2F /* PaygentTokenSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PaygentTokenSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20DF6651FBEB420004EBB2F /* Paygent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Paygent.h; sourceTree = "<group>"; };
 		A20DF6661FBEB420004EBB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				A20DF67C1FBEB79B004EBB2F /* Paygent.swift */,
 				A20DF67E1FBECE13004EBB2F /* Request.swift */,
 				A20DF6951FC2794F004EBB2F /* Responses.swift */,
+				99EDCB5A1FCC1E4F004A0E9D /* Errors.swift */,
 				A20DF6661FBEB420004EBB2F /* Info.plist */,
 			);
 			path = PaygentTokenSDK;
@@ -206,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99EDCB5B1FCC1E4F004A0E9D /* Errors.swift in Sources */,
 				A20DF6961FC2794F004EBB2F /* Responses.swift in Sources */,
 				A20DF67D1FBEB79B004EBB2F /* Paygent.swift in Sources */,
 				A20DF67F1FBECE13004EBB2F /* Request.swift in Sources */,

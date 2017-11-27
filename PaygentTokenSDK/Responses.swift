@@ -63,13 +63,4 @@ public struct PagentErrorResponse: Codable {
 }
 
 
-public enum ResponseError: Error {
-    case nonHTTPURLResponse(URLResponse?)
-    case unacceptableStatusCode(Int)
-    case unexpectedObject(Any)
-    case paygentErrorCode(String)
-}
 
-public enum SessionTaskError: Error {
-    case connectionError(Error)
-}
