@@ -14,7 +14,7 @@ public enum Result<T> {
 }
 
 
-public struct CreateCardTokenResponse: Codable {
+public struct PaygentCardTokenResponse: Codable {
     public let result: String
     public let tokenizedCard: TokenizedCard
     
@@ -37,7 +37,7 @@ public struct TokenizedCard: Codable {
 }
 
 
-public struct CreateCVCTokenResponse: Codable {
+public struct PaygentCVCTokenResponse: Codable {
     public let result: String
     public let tokenizedCVC: String
     

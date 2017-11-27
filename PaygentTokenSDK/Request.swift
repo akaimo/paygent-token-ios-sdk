@@ -44,7 +44,7 @@ public protocol CardTokenRequest: Request {
 }
 
 public extension CardTokenRequest {
-    typealias Response = CreateCardTokenResponse
+    typealias Response = PaygentCardTokenResponse
     
     func createBodyParameter() -> String {
         return "merchant_id=" + merchantID + "&token_generate_key=" + tokenGenerateKey + "&card_number=" + cardNumber + "&card_expire_year=" + cardExpireYear + "&card_expire_month=" + cardExpireMonth + "&card_cvc=" + cardCVC + "&card_name=" + cardName
@@ -59,7 +59,7 @@ public protocol CVCTokenRequest: Request {
 }
 
 public extension CVCTokenRequest {
-    typealias Response = CreateCVCTokenResponse
+    typealias Response = PaygentCVCTokenResponse
     
     func createBodyParameter() -> String {
         return "merchant_id=" + merchantID + "&token_generate_key=" + tokenGenerateKey + "&card_cvc=" + cardCVC + "&cvc_only_flg=" + cvcOnlyFlg
