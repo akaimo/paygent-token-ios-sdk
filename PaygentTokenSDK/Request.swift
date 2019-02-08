@@ -35,7 +35,7 @@ public extension Request {
 
 
 
-public protocol PaygentTokenRequest: Request {
+public protocol PaygentTokenRequest: Request where Response == PaygentCardTokenResponse {
     var cardNumber: String { get set }
     var cardExpireYear: String { get set }
     var cardExpireMonth: String { get set }
@@ -44,8 +44,6 @@ public protocol PaygentTokenRequest: Request {
 }
 
 public extension PaygentTokenRequest {
-    typealias Response = PaygentCardTokenResponse
-    
     func createBodyParameter() -> String {
         return "merchant_id=" + merchantID + "&token_generate_key=" + tokenGenerateKey + "&card_number=" + cardNumber + "&card_expire_year=" + cardExpireYear + "&card_expire_month=" + cardExpireMonth + "&card_cvc=" + cardCVC + "&card_name=" + cardName
     }
@@ -53,14 +51,12 @@ public extension PaygentTokenRequest {
 
 
 
-public protocol PaygentCVCTokenRequest: Request {
+public protocol PaygentCVCTokenRequest: Request where Response == PaygentCVCTokenResponse {
     var cardCVC: String { get set }
     var cvcOnlyFlg: String { get set }
 }
 
 public extension PaygentCVCTokenRequest {
-    typealias Response = PaygentCVCTokenResponse
-    
     func createBodyParameter() -> String {
         return "merchant_id=" + merchantID + "&token_generate_key=" + tokenGenerateKey + "&card_cvc=" + cardCVC + "&cvc_only_flg=" + cvcOnlyFlg
     }
