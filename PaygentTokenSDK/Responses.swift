@@ -39,7 +39,7 @@ public struct TokenizedCard: Codable {
 
 public struct PaygentCVCTokenResponse: Codable {
     public let result: String
-    public let tokenizedCVC: String
+    public let tokenizedCVC: TokenizedCVC
     
     enum CodingKeys: String, CodingKey {
         case result
