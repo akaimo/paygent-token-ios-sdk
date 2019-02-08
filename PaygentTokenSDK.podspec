@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PaygentTokenSDK"
-  s.version      = "1.1.0"
+  s.version      = "1.1.1"
   s.summary      = "Paygent card token iOS SDK"
   s.homepage     = "https://github.com/akaimo/paygent-token-ios-sdk"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
